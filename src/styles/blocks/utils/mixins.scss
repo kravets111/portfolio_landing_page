@@ -1,19 +1,50 @@
-@mixin onTablet {
-  @media (min-width: 567px) {
+@mixin grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 100px 20px;
+
+  @include content-padding-inline;
+  @include content-margin-block;
+
+  @include on-tablet {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @include on-desktop {
+    grid-template-columns: repeat(12, 63px);
+    gap: 140px 24px;
+  }
+}
+
+@mixin on-tablet {
+  @media (min-width: $tablet-min-width) {
     @content;
   }
 }
 
-@mixin onDesktop {
-  @media (min-width: 1023px) {
+@mixin on-desktop {
+  @media (min-width: $desctop-min-width) {
     @content;
   }
 }
 
-@mixin contentPaddingInline() {
+@mixin content-margin-block() {
+  margin-block: 100px;
+
+  @include on-desktop {
+    margin-block: 140px;
+  }
+}
+
+@mixin content-padding-inline() {
   padding-inline: 20px;
 
-  @include onTablet {
+  @include on-tablet {
     padding-inline: 72px;
+  }
+
+  @include on-desktop {
+    padding-inline: 120px;
   }
 }

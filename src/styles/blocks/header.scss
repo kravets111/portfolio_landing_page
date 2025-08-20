@@ -1,19 +1,19 @@
 .header {
   box-sizing: border-box;
   height: 100vh;
-  background-image: url(images/header-bg-mobile.png);
+  background-image: url(images/header-bg-mobile.webp);
   background-size: cover;
   background-position: center;
 
   display: flex;
   flex-direction: column;
 
-  @include onTablet {
-    background-image: url(images/header-bg-tablet.png);
+  @include on-tablet {
+    background-image: url(images/header-bg-tablet.webp);
   }
 
-  @include onDesktop {
-    background-image: url(images/header-bg-desktop.png);
+  @include on-desktop {
+    background-image: url(images/header-bg-desktop.webp);
   }
 
   &__top {
@@ -35,12 +35,12 @@
     line-height: 40px;
     letter-spacing: -1.5px;
 
-    @include onTablet {
+    @include on-tablet {
       font-size: 32px;
       line-height: 64px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       top: 46%;
       font-size: 40px;
       line-height: 80px;

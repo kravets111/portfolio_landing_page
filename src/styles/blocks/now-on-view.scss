@@ -2,14 +2,16 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 0 20px 114px;
+  grid-column: 1 / 3;
+  padding-top: 40px;
 
-  @include onTablet {
-    margin-inline: 72px;
+
+  @include on-tablet {
+    grid-column: 1 / 7;
   }
 
-  @include onDesktop {
-    margin-inline: 120px;
+  @include on-desktop {
+    grid-column: 1 / 13;
   }
 
   &__top {
@@ -20,11 +22,11 @@
   &__description {
     margin: 0 auto;
 
-    @include onTablet {
+    @include on-tablet {
       width: 60%;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       width: 40%;
     }
   }
@@ -34,7 +36,7 @@
     flex-direction: column;
     margin: 0 0 48px;
 
-    @include onTablet {
+    @include on-tablet {
       margin: 0 0 40px;
     }
   }
@@ -45,6 +47,125 @@
     justify-content: space-around;
     box-sizing: border-box;
     margin-bottom: 24px;
+
+    &--picture-second,
+    &--picture-fourth {
+      margin-left: 20px;
+
+      @include on-tablet {
+        margin-left: 24px;
+      }
+    }
+
+    &--picture-small-first,
+    &--picture-small-second,
+    &--picture-small-third {
+      height: 88px;
+
+      @include on-tablet {
+        height: 284px;
+      }
+    }
+
+    &--picture-first {
+      background-image: url(images/paint-first.webp);
+
+      @include on-tablet {
+        background-image: url(images/paint-first-tablet.webp);
+        width: 70%;
+      }
+
+      @include on-desktop {
+        background-image: url(images/paint-first-desktop.webp);
+        width: 66%;
+      }
+    }
+
+    &--picture-second {
+      background-image: url(images/paint-second.webp);
+
+      @include on-tablet {
+        background-image: url(images/paint-second-tablet.webp);
+        width: 30%;
+      }
+
+      @include on-desktop {
+        background-image: url(images/paint-second-desktop.webp);
+        width: 34%;
+      }
+    }
+
+    &--picture-third {
+      background-image: url(images/paint-third.webp);
+
+      @include on-tablet {
+        background-image: url(images/paint-third-tablet.webp);
+        width: 30%;
+      }
+
+      @include on-desktop {
+        background-image: url(images/paint-third-desktop.webp);
+        width: 34%;
+      }
+    }
+
+    &--picture-fourth {
+      background-image: url(images/paint-fourth.webp);
+
+      @include on-tablet {
+        background-image: url(images/paint-fourth-tablet.webp);
+        width: 70%;
+      }
+
+      @include on-desktop {
+        background-image: url(images/paint-fourth-desktop.webp);
+        width: 66%;
+      }
+    }
+
+    &--picture-small-first {
+      background-image: url(images/paint-small-first.webp);
+
+      @include on-tablet {
+        background-image: url(images/paint-small-first-tablet.webp);
+        width: 100%;
+      }
+
+      @include on-desktop {
+        background-image: url(images/paint-small-first-desktop.webp);
+      }
+    }
+
+    &--picture-small-second {
+      background-image: url(images/paint-small-second.webp);
+      margin-left: 8px;
+      margin-right: 8px;
+
+      @include on-tablet {
+        background-image: url(images/paint-small-second-tablet.webp);
+        width: 100%;
+        margin-left: 24px;
+        margin-right: 0;
+      }
+
+      @include on-desktop {
+        background-image: url(images/paint-small-second-desktop.webp);
+        margin-right: 24px;
+      }
+    }
+
+    &--picture-small-third {
+      background-image: url(images/paint-small-third.webp);
+
+      @include on-tablet {
+        display: none;
+      }
+
+      @include on-desktop {
+        display: block;
+        background-image: url(images/paint-small-third-desktop.webp);
+      }
+    }
 
     &--picture-first,
     &--picture-second,
@@ -58,132 +179,21 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      transition: transform 0.4s ease-in-out;
 
-      @include onTablet {
+
+      @include on-tablet {
         height: 186px;
       }
 
-      @include onDesktop {
+      @include on-desktop {
         height: 320px;
       }
-    }
 
-    &--picture-second,
-    &--picture-fourth {
-      margin-left: 20px;
-
-      @include onTablet {
-        margin-left: 24px;
-      }
-    }
-
-    &--picture-small-first,
-    &--picture-small-second,
-    &--picture-small-third {
-      height: 88px;
-
-      @include onTablet {
-        height: 284px;
-      }
-    }
-
-    &--picture-first {
-      background-image: url(images/paint-first.png);
-
-      @include onTablet {
-        background-image: url(images/paint-first-tablet.png);
-        width: 70%;
-      }
-
-      @include onDesktop {
-        background-image: url(images/paint-first-desktop.png);
-        width: 66%;
-      }
-    }
-
-    &--picture-second {
-      background-image: url(images/paint-second.png);
-
-      @include onTablet {
-        background-image: url(images/paint-second-tablet.png);
-        width: 30%;
-      }
-
-      @include onDesktop {
-        background-image: url(images/paint-second-desktop.png);
-        width: 34%;
-      }
-    }
-
-    &--picture-third {
-      background-image: url(images/paint-third.png);
-
-      @include onTablet {
-        background-image: url(images/paint-third-tablet.png);
-        width: 30%;
-      }
-
-      @include onDesktop {
-        background-image: url(images/paint-third-desktop.png);
-        width: 34%;
-      }
-    }
-
-    &--picture-fourth {
-      background-image: url(images/paint-fourth.png);
-
-      @include onTablet {
-        background-image: url(images/paint-fourth-tablet.png);
-        width: 70%;
-      }
-
-      @include onDesktop {
-        background-image: url(images/paint-fourth-desktop.png);
-        width: 66%;
-      }
-    }
-
-    &--picture-small-first {
-      background-image: url(images/paint-small-first.png);
-
-      @include onTablet {
-        background-image: url(images/paint-small-first-tablet.png);
-        width: 100%;
-      }
-
-      @include onDesktop {
-        background-image: url(images/paint-small-first-desktop.png);
-      }
-    }
-
-    &--picture-small-second {
-      background-image: url(images/paint-small-second.png);
-      margin-left: 8px;
-      margin-right: 8px;
-
-      @include onTablet {
-        background-image: url(images/paint-small-second-tablet.png);
-        width: 100%;
-        margin-left: 24px;
-        margin-right: 0;
-      }
-
-      @include onDesktop {
-        background-image: url(images/paint-small-second-desktop.png);
-        margin-right: 24px;
-      }
-    }
-
-    &--picture-small-third {
-      background-image: url(images/paint-small-third.png);
-
-      @include onTablet {
-        display: none;
-      }
-
-      @include onDesktop {
-        display: block;
-        background-image: url(images/paint-small-third-desktop.png);
+      &:hover {
+        @include on-desktop {
+          transform: scale(1.07);
+        }
       }
     }
   }

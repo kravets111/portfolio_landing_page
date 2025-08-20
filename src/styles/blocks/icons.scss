@@ -5,14 +5,14 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @include onTablet {
+  @include on-tablet {
     height: 32px;
     width: 32px;
   }
 
   &--phone {
     background-image: url(images/icons/icon-phone.svg);
-    transition: transform 0.3s;
+    transition: transform 0.4s ease-in-out;
 
     &:hover {
       transform: scale(1.2);
@@ -21,7 +21,7 @@
 
   &--menu {
     background-image: url(images/icons/icon-burger-menu.svg);
-    transition: transform 0.3s;
+    transition: transform 0.4s ease-in-out;
 
     &:hover {
       transform: scale(1.2);
@@ -30,11 +30,10 @@
 
   &--close {
     background-image: url(images/icons/icon-close.svg);
-    transition: 0.3s ease;
+    transition: transform 0.4s ease-in-out;
 
     &:hover {
       transform: rotate(90deg);
-      transition: 0.7s ease-in-out;
     }
   }
 }

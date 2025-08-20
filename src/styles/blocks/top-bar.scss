@@ -1,17 +1,18 @@
 .top-bar {
   padding-block: 24px;
   z-index: 1;
-  @include contentPaddingInline;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  @include onTablet {
+  @include content-padding-inline;
+
+  @include on-tablet {
     padding-block: 32px;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     padding-block: 24px;
   }
 
@@ -26,7 +27,7 @@
     height: 46px;
     width: 64px;
 
-    @include onDesktop {
+    @include on-desktop {
       height: 65px;
       width: 87px;
     }
@@ -40,17 +41,17 @@
     width: 200px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
     text-shadow: 18px 4px 26px rgba(0, 0, 0, 0.44);
     font-weight: 600;
 
     display: flex;
     flex-direction: column;
     align-items: end;
+    transition: all 0.4s ease-in-out;
   }
 
   .hover--phone:hover ~ .top-bar__hover-phone {
-    @include onDesktop {
+    @include on-desktop {
       opacity: 1;
       pointer-events: auto;
     }

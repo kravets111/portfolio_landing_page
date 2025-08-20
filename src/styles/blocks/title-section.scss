@@ -6,7 +6,7 @@
   letter-spacing: -1.5px;
   margin: 0;
 
-  @include onTablet {
+  @include on-tablet {
     font-size: 48px;
     line-height: 48px;
   }

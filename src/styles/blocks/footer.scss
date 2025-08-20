@@ -1,16 +1,16 @@
 .footer {
-  background-image: url(images/footer-bg-mobile.png);
+  background-image: url(images/footer-bg-mobile.webp);
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
   height: 180px;
 
-  @include onTablet {
-    background-image: url(images/footer-bg-tablet.png);
+  @include on-tablet {
+    background-image: url(images/footer-bg-tablet.webp);
     height: 360px;
   }
 
-  @include onDesktop {
-    background-image: url(images/footer-bg-desktop.png);
+  @include on-desktop {
+    background-image: url(images/footer-bg-desktop.webp);
   }
 }

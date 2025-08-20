@@ -16,7 +16,7 @@
   }
 
   &__content {
-    @include contentPaddingInline;
+    @include content-padding-inline;
   }
 
   &__span {
@@ -24,7 +24,7 @@
     font-size: 16px;
     line-height: 27px;
     width: fit-content;
-    color: #fff;
+    color: $white-text-color;
     text-decoration: none;
     margin-bottom: 0;
   }
@@ -34,7 +34,7 @@
     font-size: 16px;
     line-height: 27px;
     width: fit-content;
-    color: #fff;
+    color: $white-text-color;
     text-decoration: none;
     margin-bottom: 8px;
     position: relative;
@@ -46,7 +46,7 @@
       height: 1px;
       position: absolute;
       bottom: -6px;
-      background-color: #fff;
+      background-color: $white-text-color;
 
       transform: scale(0);
       transition: 0.8s ease;
@@ -65,7 +65,7 @@
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 2px;
-    color: #fff;
+    color: $white-text-color;
     text-decoration: none;
     padding-top: 8px;
     padding-bottom: 7px;
@@ -78,7 +78,7 @@
       height: 1px;
       position: absolute;
       bottom: -8px;
-      background-color: #fff;
+      background-color: $white-text-color;
 
       transform: scale(0);
       transition: 0.8s ease;

@@ -1,8 +1,8 @@
 .button--submit {
-  font-family: "Cinzel", serif;
+  font-family: $main-font-famaly;
   background-color: $red-text-color;
   text-align: center;
-  color: #fff;
+  color: $white-text-color;
   font-size: 16px;
   font-weight: 700;
   line-height: 27px;
@@ -11,24 +11,23 @@
   padding: 15px 0;
   margin: 0 auto;
   display: inline-block;
-  transition: 0.6s ease-in;
   cursor: pointer;
   outline: none;
+  transition: background-color 0.4s ease-in-out;
 
   &:hover {
-    background-color: #ae1c23;
-    transition: 0.4s ease-out;
+    background-color: $hover-button-color;
   }
 
   &:active {
-    background-color: #eb343d;
+    background-color: $active-button-color;
   }
 
-  @include onTablet {
+  @include on-tablet {
     width: 65%;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     width: 40%;
   }
 }

@@ -1,23 +1,29 @@
 .about-us {
   display: flex;
   flex-direction: column;
-  margin: 100px 20px;
+  grid-column: 1 / 3;
+  padding-top: 40px;
 
-  @include onTablet {
+  @include on-tablet {
     flex-direction: row;
-    margin-inline: 72px;
+    grid-column: 1 / 7;
   }
 
-  @include onDesktop {
-    margin: 138px 120px 140px;
+  @include on-desktop {
+    grid-column: 1 / 13;
   }
 
   &__title--content {
     display: flex;
     flex-direction: column;
 
-    @include onTablet {
+    @include on-tablet {
       width: 50%;
+    }
+
+    @include on-desktop {
+      flex-grow: 1;
+      width: auto;
     }
 
     &-span {
@@ -38,14 +44,20 @@
     display: flex;
     flex-direction: column;
 
-    @include onTablet {
+    @include on-tablet {
       width: 50%;
+    }
+
+    @include on-desktop {
+      flex-grow: 6;
+      flex-basis: min-content;
+      width: auto;
     }
 
     &--part {
       margin: 24px 0;
 
-      @include onTablet {
+      @include on-tablet {
         margin-top: 0;
         margin-bottom: 24px;
       }
