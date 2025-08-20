@@ -1,6 +1,6 @@
 # "The MET" - this is museum website. Here you can see what current exhibitions are and contact us.
-    - [DEMO LINK](https://kravets111.github.io/portfolio_landing_page/)
-    - [The MET landing](https://www.figma.com/file/lSR1m42L9YwzQwzzxKwHpw/THE-MET)
+  - [DEMO LINK](https://kravets111.github.io/portfolio_landing_page/)
+  - [The MET landing](https://www.figma.com/file/lSR1m42L9YwzQwzzxKwHpw/THE-MET)
 
 ## Core Technologies:
 
